@@ -1,5 +1,6 @@
 {
   "name": "covid-dio",
+  "homepage": "https://luanagiusto.github.io/covid-19-React/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +19,10 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "eslint": "eslint --ext .jsx,.js src"
+    "eslint": "eslint --ext .jsx,.js src",
+    "watch": "ng build --watch --configuration development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "deploy-to-github-pages": "^1.0.1",
     "gh-pages": "^3.2.3"
   }
 }
